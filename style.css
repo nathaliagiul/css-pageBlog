@@ -1,66 +1,57 @@
+/* Estilos padrão */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  }
+}
 
-:root{
-    font-size: 62,5%;
-
+:root {
+    font-size: 62.5%;
     --wht: hsl(0, 0%, 100%);
     --txt-all: hsl(240, 6%, 13%);
     --input: hsla(0, 0%, 100%, 0.2);
     --input-select: hsla(0, 0%, 100%, 0.5);
-    --background:hsl(195, 91%, 25%);
+    --background: hsl(195, 91%, 25%);
     --btn-color: hsl(195, 91%, 25%);
-
     height: 100vh;
 }
 
-body, main, input, footer, aside{
+body, main, input, footer, aside {
     font-family: 'Mulish', sans-serif;
 }
 
-#page{
+#page {
     font-size: 1.6rem;
 }
 
 body {
     display: grid;
-
     grid-template-areas:
     "header header header"
     "main main aside"
     "main main aside"
     "footer footer footer";
-
-    justify-content: center;    
+    justify-content: center;
     align-content: center;
-    
     margin: 0 auto;
 }
 
-header{
+header {
     height: 7rem;
-
     grid-area: header;
     background: var(--background);
-
     display: flex;
     padding: 1.2rem 11.2rem;
-
     align-items: center;
     justify-content: space-between;
-
     gap: 3rem;
     flex-shrink: 0;
     margin-bottom: 4.4rem;
 }
 
-form{
+form {
     display: flex;
     align-items: center;
     align-content: center;
@@ -73,7 +64,6 @@ form{
     height: .1rem;
     overflow: hidden;
     position: absolute;
-
     text-align: center;
     font-size: 1rem;
     color: var(--wht);
@@ -83,15 +73,11 @@ form{
 .input-wrapper input {
     display: flex;
     width: 100rem;
-    
     flex-shrink: 0;
-
     margin: 0 auto;
     padding: 1.2rem 1.6rem 1.2rem 1.4rem;
-
     border: 0;
     border-radius: 0.8rem;
-    
     align-items: center;
     gap: 1.2rem;
     background: var(--input);
@@ -103,7 +89,7 @@ header form input:focus {
 
 .input-wrapper input::placeholder {
     color: var(--wht);
-  }
+}
 
 .avatar {
     width: 4.2rem;
@@ -112,109 +98,101 @@ header form input:focus {
     border-radius: 50%;
 }
 
-main{
+main {
     grid-area: main;
     background: var(--wht);
     margin: auto;
 }
 
-main a:hover{
+main a:hover {
     filter: hue-rotate(7deg) contrast(101%) saturate(200%);
     transform: scale(1.1) rotate(-2deg);
 }
 
-.banner{
+.banner {
     height: 40rem;
     display: block;
     border-radius: .5rem;
-    
     flex-shrink: 0;
 }
 
-#app{
+#app {
     width: 60rem;
-
     display: inline-flex;
     flex-direction: column;
-    
     align-items: flex-start;
     gap: 0.8rem;
-
     justify-content: center;
     margin: 0;
     padding: 1.2rem;
 }
 
-h1{
+h1 {
     color: var(--txt-all);
     font-size: 2.4rem;
     justify-content: center;
     align-items: center;
 }
 
-.buttons{
+.buttons {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1rem;
 }
 
-.btn-like{
+.btn-like {
     border: 0;
     border-radius: 99%;
-    background: var(--btn-color);    
-
+    background: var(--btn-color);
     display: flex;
     padding: .8rem;
-
     gap: .6rem;
     cursor: pointer;
 }
 
-.btn-like a:hover img{
+.btn-like a:hover img {
     filter: contrast(101%) saturate(100%) hue-rotate(8);
     transform: scale(1.5) rotate(-2deg);
 }
 
-#app p{
+#app p {
     margin-top: 3rem;
     color: var(--txt-p,#121214);
     font-size: 1.6rem;
     text-align: justify;
 }
 
-aside{
+aside {
     grid-area: aside;
     background: var(--wht);
     background: linear-gradient(180deg, hsl(0, 0%, 100%) 0%, hsla(237, 23%, 84%, 0.166) 43%, hsla(240, 100%, 16%, 0) 80%);
-
     display: inline-flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 3.2rem;
 }
 
-aside h1{
+aside h1 {
     color: var(--txt-all);
     font-size: 2rem;
 }
 
-aside p{
+aside p {
     font-size: 1.4rem;
     width: 30rem;
 }
 
-.galery{
+.galery {
     display: inline-flex;
     flex-direction: column;
     align-items: flex-start;
-
     gap: 3.2rem;
     margin: auto;
     align-items: center;
 }
 
-.item{
+.item {
     display: flex;
     align-items: center;
     gap: 1.6rem;
@@ -223,7 +201,7 @@ aside p{
     margin-bottom: 3.5rem;
 }
 
-.item a:hover img{
+.item a:hover img {
     transform: scale(1.2);
 }
 
@@ -234,33 +212,29 @@ aside p{
 }
 
 .details p {
-    color:var(--txt-p);
+    color: var(--txt-p);
     font-size: 1.4rem;
 }
 
-.details{
+.details {
     z-index: 1;
     position: relative;
 }
 
-footer{
+footer {
     grid-area: footer;
     background: var(--background);
-
     display: flex;
-
     padding: 1.6rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     gap: 1rem;
     flex-shrink: 0;
-
     margin-top: 3.4rem;
 }
 
-footer p{
+footer p {
     color: var(--wht);
     text-align: center;
     font-size: 1rem;
@@ -277,12 +251,59 @@ header {
 }
   
 footer {
---startY: 100%;
-animation: move .2s;
+    --startY: 100%;
+    animation: move .2s;
 }
 
 @keyframes move {
-from {
-    transform: translateY(var(--startY));
+    from {
+        transform: translateY(var(--startY));
+    }
 }
+
+/* Media query para dispositivos móveis */
+@media only screen and (max-width: 768px) {
+    body {
+        grid-template-areas:
+        "header header header"
+        "main main main"
+        "aside aside aside"
+        "footer footer footer";
+    }
+    
+    footer {
+        margin-top: 1.6rem;
+    }
+
+    header, aside {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    /* Ajuste para tornar o header proporcional */
+    header {
+        display: flex;
+        justify-content: space-between; /* Garante que os elementos sejam espaçados uniformemente */
+        align-items: center; /* Centraliza verticalmente os elementos */
+    }
+
+    .logo {
+        max-width: 100%; /* Ajuste a largura máxima do logo para que ele seja proporcional ao header */
+    }
+
+    form {
+        flex-grow: 1; /* Ocupa o espaço disponível restante */
+        margin: 0 1rem; /* Adiciona margem nos lados para espaçamento */
+        width: 100%; /* Ajusta a largura do form para ocupar 100% do espaço disponível */
+    }
+
+    .input-wrapper input {
+        width: 100%; /* Define a largura do input para ocupar 100% do espaço disponível dentro do form */
+    }
+
+    .avatar {
+        width: 10%; /* Ajuste o tamanho do avatar proporcionalmente ao header */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+    
 }
